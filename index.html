@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div><a href="https://cedrixian05.github.io/Portfolio-website/" class="logo">IANTECH</a></div>
+            <ul class="banner">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>  
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <div class="text">
+                <div class="text-one">Importance of Web Development</div>
+            </div>
+            <div class="description">
+                <p>Web development is essential for building an online presence, enhancing brand credibility, and engaging with a global audience. A well-crafted website boosts accessibility, drives growth, and expands market reach.</p>
+            </div>
+            <div class="button">
+                <button onclick="scrollToSection('about')">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="content">
+            <div class="title"><span>About</span></div>
+            <div class="about-details">
+                <div class="about-box fade-in">
+                    <img src="online.png" alt="Online Presence and Accessibility">
+                    <h1>Online Presence and Accessibility</h1>
+                    <p>Web development ensures that your business or personal brand is accessible to a global audience at any time, helping you reach more people and stay connected with your audience around the clock.</p>
+                </div>
+                <div class="about-box fade-in">
+                    <img src="brand.png" alt="Brand Identity and Credibility">
+                    <h1>Brand Identity and Credibility</h1>
+                    <p>A well-designed website establishes your brand's credibility by showcasing your values, products, or services in a professional manner, building trust with visitors and encouraging engagement.</p>
+                </div>
+                <div class="about-box fade-in">
+                    <img src="customer.png" alt="Customer Interaction and Engagement">
+                    <h1>Customer Interaction and Engagement</h1>
+                    <p>Web development allows for interactive features like contact forms, live chats, and social media integration, facilitating direct communication and enabling you to gather valuable feedback.</p>
+                </div>
+                <div class="about-box fade-in">
+                    <img src="market.png" alt="Market Expansion and Sales Growth">
+                    <h1>Market Expansion and Sales Growth</h1>
+                    <p>Having a strong web presence allows you to expand your reach beyond local markets, attracting new customers from different regions, leading to increased sales and business growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="text">
+            <span>Created By <a href="https://github.com/Cedrixian05">Cedrixian</a> | &#169; 2024 All Rights Reserved</span>
+        </div>
+        <div class="footer-logos">
+            <a href="https://github.com/Cedrixian05" target="_blank">
+                <img src="git.png" alt="Footer Logo 1">
+            </a>
+            <a href="https://www.facebook.com/cedrixian.nocum" target="_blank">
+                <img src="facebook.png" alt="Footer Logo 2">
+            </a>
+            <a href="https://www.instagram.com/cedrixian/" target="_blank">
+                <img src="ins.png" alt="Footer Logo 3">
+            </a>
+            <a href="https://www.facebook.com/cedrixian.nocum" target="_blank">
+                <img src="messenger.png" alt="Footer Logo 4">
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function handleScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        document.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>
